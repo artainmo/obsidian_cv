@@ -2,6 +2,6 @@ title: Arthur Tainmont Curriculum Vitae
 description: Curriculum Vitae
 baseurl: /obsidian_cv # Only if you're not using a custom domain
 url: https://artainmo.github.io
-remote_theme: jglovier/resume-template
+remote_theme: heartsker/researcher@gem
 plugins:
   - jekyll-remote-theme
