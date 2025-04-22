@@ -20,7 +20,8 @@
     <header class="page-header" role="banner">
       <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
       <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
-      <img src="images/pass_photo.jpg" alt="Face Picture" style="width: 10vw; max-width: 150px; height: 10vw; max-height: 150px; border-radius: 50%; object-fit: cover; ">
+      <img src="images/pass_photo.jpg" alt="Face Picture" 
+        style="width: 10vw; min-width: 100px; max-width: 150px; height: 10vw; min-height: 100px; max-height: 150px; border-radius: 50%; object-fit: cover;">
       <br/><br/>
       <a href="mailto:tainmontarthur@icloud.com" class="btn">Contact</a>
       {% if site.show_downloads %}
