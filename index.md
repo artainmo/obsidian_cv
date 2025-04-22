@@ -1,4 +1,3 @@
 ---
-layout: default
-title: Arthur Tainmont
+layout: resume
 ---
