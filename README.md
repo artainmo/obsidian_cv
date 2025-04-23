@@ -12,5 +12,6 @@ Add pictures from obsidian to the website via the 'makefile'.
 I registered a custom domain at '[hello.cv](https://www.hello.cv/)'.<br>
 On 'hello.cv' I added one DNS record type A for 'tainmontarthur.cv' at '185.199.108.153' with auto TLS.<br>
 I added another DNS record type A for 'www.tainmontarthur.cv' at 'tainmontarthur.cv' with auto TLS.<br>
-I went on github pages settings of this repository, added the custom domain, and enforced HTTPS.<br>
-Lastly, I changed the 'url' and 'baseulr' in '_config.yml'.
+I changed the 'url' and 'baseulr' in '_config.yml'.<br>
+Inside the site deployment github action, I added a step to create the CNAME file containing the custom domain; for the site to automatically launch itself on the custom domain.<br>
+I went on github pages settings of this repository, verified everything is working, and enforced HTTPS.<br>
