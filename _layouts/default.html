@@ -34,7 +34,11 @@
       {{ content }}
 
       <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/artainmo/obsidian_cv">obsidian_cv</a> is maintained by <a href="https://github.com/artainmo">artainmo</a>.</span>
+        <span class="site-footer-owner">
+          <a href="https://github.com/artainmo/obsidian_cv">obsidian_cv</a> is maintained by 
+          <a href="https://github.com/artainmo">artainmo</a> and last updated on 
+          {{ site.time | date: "%-d %B %Y" }}.
+        </span>
       </footer>
     </main>
   </body>
