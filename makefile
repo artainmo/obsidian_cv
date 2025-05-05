@@ -4,7 +4,20 @@ build: # Retrieve the note from obsidian
 	cd obsidian-html && chmod +x transform.sh && ./transform.sh
 	cd obsidian-html && python -m obsidianhtml convert -i config.yml
 	tail -n +5  obsidian-html/output/md/index.md >> index.md
-	#cp Obsidian/Obsidian/Screenshot\ 2024-03-21\ at\ 16.44.14.png . # Also add local images
+	# Also add local images
+	cp Obsidian/Obsidian/web\ et\ mobile.png . 
+	cp Obsidian/Obsidian/applicative\ programming.png . 
+	cp Obsidian/Obsidian/database\ architecture\ and\ data.png . 
+	cp Obsidian/Obsidian/AWS\ Certified\ Cloud\ Practitioner\ certificate.pdf . 
+	cp Obsidian/Obsidian/AWS\ Certified\ Cloud\ Practitioner.pdf . 
+	cp Obsidian/Obsidian/AWS\ Certified\ Machine\ Learning\ -\ Specialty\ certificate.pdf .
+	cp Obsidian/Obsidian/AWS\ Certified\ Machine\ Learning\ -\ Specialty.pdf .
+	cp Obsidian/Obsidian/Coursera\ 4V4FNOHS1GBM.pdf .
+	cp Obsidian/Obsidian/Screenshot\ 2025-05-05\ at\ 16.31.24.png .
+	cp Obsidian/Obsidian/Certificate_NSL_Recognised.pdf .
+	cp Obsidian/Obsidian/D45DE426-60F6-4FED-9EAC-4CFC3F061C67_1_201_a.jpeg .
+	cp Obsidian/Obsidian/Capture\ d’écran\ 2019-05-16\ à\ 10.18.54.png .
+	cp Obsidian/Obsidian/Birdhouse\ accelerator.png .
 
 update: # update obsidian to have latest cv note
 	git submodule update --remote # Git knows what to update thanks to the .gitmodules file
