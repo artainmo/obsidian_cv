@@ -16,13 +16,13 @@ def parse_bullets(lines):
             next_line = ""
         next_line_stripped = next_line.lstrip('\t')
         next_line_depth = len(next_line) - len(next_line_stripped)
+        # Close deeper levels if needed
+        while stack and stack[-1] >= depth:
+            html_lines.append('\t' * stack[-1] + "</details>")
+            stack.pop()
         # Check if it's a bullet point
         if stripped.startswith("* "):
             content = stripped[2:].strip()
-            # Close deeper levels if needed
-            while stack and stack[-1] >= depth:
-                html_lines.append('\t' * stack[-1] + "</details>")
-                stack.pop()
             if next_line_stripped.startswith("* ") and next_line_depth > depth:
                 # Open a new toggle
                 html_lines.append('\t' * depth + f'<details>')
