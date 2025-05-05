@@ -4,7 +4,7 @@ def parse_bullets(lines):
 
     for i, line in enumerate(lines):
         # Skip empty lines
-        if not line.strip():
+        if not line.strip() or i < 11:
             continue
         # Count leading tabs for depth
         stripped = line.lstrip('\t')
