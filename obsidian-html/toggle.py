@@ -4,8 +4,8 @@ def parse_bullets(lines):
 
     for i, line in enumerate(lines):
         # Skip empty lines
-        if not line.strip() or i < 11:
-            html_lines.append(f"<p>{line.strip()}</p>")
+        if not line.strip() or i < 13:
+            html_lines.append(line)
             continue
         # Count leading tabs for depth
         stripped = line.lstrip('\t')
@@ -32,7 +32,7 @@ def parse_bullets(lines):
                 # Treat as paragraph content inside current toggle
                 html_lines.append('\t'*depth + f'<p style="margin-left: {depth}em;">{content}</p>')
         else:
-            html_lines.append(f"<p>{line.strip()}</p>")
+            html_lines.append(line)
 
     # Close any remaining open tags
     while stack:
