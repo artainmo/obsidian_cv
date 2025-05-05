@@ -1,8 +1,8 @@
 build: # Retrieve the note from obsidian 
 	tail -n +2 Obsidian/Obsidian/curriculum-vitae,\ web.md >> obsidian-html/index.md # When appending omit the first line of tags
 	cp -R Obsidian/Obsidian/.obsidian obsidian-html
-	cd obsidian-html && chmod +x transform.sh && ./transform.sh
 	cd obsidian-html && python -m obsidianhtml convert -i config.yml
+	cd obsidian-html && chmod +x transform.sh && ./transform.sh
 	tail -n +5  obsidian-html/output/md/index.md >> index.md
 	# Also add local images
 	cp Obsidian/Obsidian/web\ et\ mobile.png . 
