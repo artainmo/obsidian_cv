@@ -5,6 +5,7 @@ build: # Retrieve the note from obsidian
 	cd obsidian-html && chmod +x transform.sh && ./transform.sh
 	#cat obsidian-html/index.md # Visualize if the changes occured correctly
 	cd obsidian-html && python -m obsidianhtml convert -i config.yml
+	cd obsidian-html && python toggle.py
 	tail -n +5  obsidian-html/output/md/index.md >> index.md
 	# Also add local images
 	cp Obsidian/Obsidian/web\ et\ mobile.png . 
