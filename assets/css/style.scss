@@ -77,3 +77,11 @@ details > *:not(summary) {
   width: 100%;
   height: 100%;
 }
+
+/* Optional: Adjust ratio for wider screens */
+@media (min-width: 768px) {
+  .pdf-container {
+    padding-bottom: 56.25%; /* 16:9 on desktop */
+    max-height: 630px;
+  }
+}
