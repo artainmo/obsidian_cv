@@ -890,20 +890,21 @@ details > *:not(summary) {
   position: relative;
   width: 100%;
   height: 0;
-  padding-bottom: 130%;
-  /* Mobile-friendly ratio */
-  max-height: 630px;
-  /* Cap on large screens */
+  padding-bottom: 100%;
+  /* Reasonable height for mobile (1:1 ratio) */
+  max-height: 90vh;
+  /* Avoids going off-screen on small devices */
   overflow: hidden; }
 
+@media (min-width: 768px) {
+  .pdf-container {
+    padding-bottom: 78.75%;
+    /* Taller ratio for desktop */
+    max-height: 630px;
+    /* Fixed max height for large screens */ } }
 .pdf-container embed {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%; }
-
-/* Optional: Adjust ratio for wider screens */
-@media (min-width: 768px) {
-  .pdf-container {
-    padding-bottom: 78.75%; } }
