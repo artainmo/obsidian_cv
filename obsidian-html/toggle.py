@@ -1,3 +1,5 @@
+import re
+
 def parse_bullets(lines):
     stack = []  # Stack to manage nested levels
     html_lines = []
