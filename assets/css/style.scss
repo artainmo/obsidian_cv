@@ -81,6 +81,6 @@ details > *:not(summary) {
 /* Optional: Adjust ratio for wider screens */
 @media (min-width: 768px) {
   .pdf-container {
-    padding-bottom: 56.25%; /* 16:9 on desktop */
+    padding-bottom: 78.75%; 
   }
 }
