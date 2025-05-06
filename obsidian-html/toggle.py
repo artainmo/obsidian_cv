@@ -26,7 +26,7 @@ def parse_bullets(lines):
             if next_line_stripped.startswith("* ") and next_line_depth > depth:
                 # Open a new toggle
                 html_lines.append('\t' * depth + f'<details markdown="1">')
-                html_lines.append('\t' * depth + f'<summary style="margin-left: {depth}em;" markdown="1">{content}</summary>')
+                html_lines.append('\t' * depth + f'<summary style="margin-left: {depth}em;">{content}</summary>')
                 stack.append(depth)
             else:
                 # Treat as paragraph content inside current toggle
