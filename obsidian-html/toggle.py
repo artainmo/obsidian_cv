@@ -41,10 +41,27 @@ def parse_bullets(lines):
 
     return html_lines
 
+def convert_markdown_images_line(line):
+    # Convert ![Alt](url) → <img src="url" alt="Alt">
+    return re.sub(r'!\[([^\]]+)\]\(([^)]+)\)', r'<img src="\2" alt="\1">', line)
+
+def convert_markdown_links_line(line):
+    # Convert [Text](url) → <a href="url">Text</a>
+    return re.sub(r'\[([^\]]+)\]\(([^)]+)\)', r'<a href="\2">\1</a>', line)
+
+def convert_unparsed_markdown_between_toggles(lines): # Because we use HTML to create toggles, the inside content won't be parsed as markdown, thus we parse and convert that markdown manually.
+    converted = []
+    for line in lines:
+        line = convert_markdown_images_line(line)
+        line = convert_markdown_links_line(line)
+        converted.append(line)
+    return converted
+
 def transform_markdown_to_html_toggles(filename):
     with open(filename, 'r', encoding='utf-8') as f:
         lines = f.readlines()
-    html_lines = parse_bullets(lines)
+    converted_lines = convert_unparsed_markdown_between_toggles(lines)
+    html_lines = parse_bullets(converted_lines)
     with open(filename, 'w', encoding='utf-8') as f:
         f.write('\n'.join(html_lines))
 
