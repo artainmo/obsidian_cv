@@ -40,6 +40,10 @@ summary::before {
   color: #555;
 }
 
+summary::-webkit-details-marker {
+  display: none;
+}
+
 details > summary::before {
   content: "▶";
   position: absolute;
