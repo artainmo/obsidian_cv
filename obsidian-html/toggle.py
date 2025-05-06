@@ -44,8 +44,8 @@ def parse_bullets(lines):
     return html_lines
 
 def convert_markdown_images_line(line):
-    # Convert ![Alt](url) → <img src="url" alt="Alt">
-    return re.sub(r'!\[([^\]]+)\]\(([^)]+)\)', r'<img src="\2" alt="\1">', line)
+    # Handles both empty and non-empty alt text
+    return re.sub(r'!\[([^\]]*)\]\(([^)]+)\)', r'<img src="\2" alt="\1">', line)
 
 def convert_markdown_links_line(line):
     # Convert [Text](url) → <a href="url">Text</a>
