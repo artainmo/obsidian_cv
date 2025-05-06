@@ -907,5 +907,4 @@ details > *:not(summary) {
 @media (min-width: 768px) {
   .pdf-container {
     padding-bottom: 56.25%;
-    /* 16:9 on desktop */
-    max-height: 630px; } }
+    /* 16:9 on desktop */ } }
