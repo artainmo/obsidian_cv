@@ -869,7 +869,16 @@ summary::before {
   transition: transform 0.2s ease-in-out;
   color: #555; }
 
-details[open] summary::before {
+details > summary::before {
+  content: "▶";
+  position: absolute;
+  left: 0;
+  top: 0.1em;
+  font-size: 0.85em;
+  transition: transform 0.2s ease-in-out;
+  color: #555; }
+
+details[open] > summary::before {
   transform: rotate(90deg);
   color: #007acc; }
 
