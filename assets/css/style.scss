@@ -40,6 +40,10 @@ summary::before {
   color: #555;
 }
 
+summary::-webkit-details-marker {
+  display: none;
+}
+
 details > summary::before {
   content: "▶";
   position: absolute;
@@ -62,16 +66,18 @@ details > *:not(summary) {
 /* === compatibility across screen sizes with pdfs === */
 
 .pdf-container {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 130%; /* Adjust this to control aspect ratio */
-  }
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 78.75%;   /* Good height ratio for certificate, it means wider than taller */
+  max-height: 90vh;       /* Avoids going off-screen on small devices */
+  overflow: hidden;
+}
 
-  .pdf-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
+.pdf-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
