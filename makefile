@@ -6,7 +6,7 @@ build: # Retrieve the note from obsidian
 	#cat obsidian-html/index.md # Visualize if the changes occured correctly
 	cd obsidian-html && python -m obsidianhtml convert -i config.yml
 	cd obsidian-html && python toggle.py
-	tail -n +5  obsidian-html/output/md/index.md >> index.md
+	tail -n +5  obsidian-html/output/md/index.md >> index.md # When appending omit the 'Index' line
 	# Also add local images
 	cp Obsidian/Obsidian/web\ et\ mobile.png . 
 	cp Obsidian/Obsidian/applicative\ programming.png . 
