@@ -21,6 +21,7 @@ build: # Retrieve the note from obsidian
 	cp Obsidian/Obsidian/D45DE426-60F6-4FED-9EAC-4CFC3F061C67_1_201_a.jpeg .
 	cp Obsidian/Obsidian/Capture\ d’écran\ 2019-05-16\ à\ 10.18.54.png .
 	cp Obsidian/Obsidian/Birdhouse\ accelerator.png .
+	cp Obsidian/Obsidian/Screenshot\ 2025-05-16\ at\ 10.35.16.png .
 
 update: # update obsidian to have latest cv note
 	git submodule update --remote # Git knows what to update thanks to the .gitmodules file
