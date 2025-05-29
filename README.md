@@ -9,6 +9,8 @@ Make custom changes on the website in the case the transformation from markdown 
 Add pictures from obsidian to the website via the 'makefile'. 
 
 ## Custom domain
+I used [this tutorial](https://www.youtube.com/watch?v=e5AwNU3Y2es).
+
 I registered a custom domain at '[hello.cv](https://www.hello.cv/)'.<br>
 On 'hello.cv' I added one DNS record type A for 'tainmontarthur.cv' at '185.199.108.153' with auto TLS.<br>
 I added another DNS record type A for 'www.tainmontarthur.cv' at 'tainmontarthur.cv' with auto TLS.<br>
